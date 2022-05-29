@@ -76,7 +76,7 @@ public class GameActivity extends Activity implements View.OnClickListener{
 
         Random randInt = new Random();
 
-        int partA = randInt.nextInt(30)+10;
+        int partA = randInt.nextInt(15)+10;
         partA++;
 
         int partB = randInt.nextInt(15)+10;
