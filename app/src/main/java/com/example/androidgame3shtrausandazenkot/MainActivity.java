@@ -16,9 +16,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_main);
 
 
-        final Button buttonPlay = (Button)findViewById(R.id.buttonPlay);
-        final Button buttonQuit = (Button)findViewById(R.id.quitButton);
-        final Button finalScore = (Button)findViewById(R.id.final_score);
+        final Button buttonPlay = findViewById(R.id.buttonPlay);
+        final Button buttonQuit = findViewById(R.id.quitButton);
+        final Button finalScore = findViewById(R.id.final_score);
         buttonPlay.setOnClickListener(this);
         buttonQuit.setOnClickListener(this);
         finalScore.setOnClickListener(this);
@@ -28,11 +28,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
     @Override
 
     public void onClick(View view) {
-        TextView score = (TextView) findViewById(R.id.final_score_text);
+        TextView score = findViewById(R.id.final_score_text);
         switch(view.getId()){
             case R.id.buttonPlay: // start the game.
 
-                GameActivity.currentScore = 0; // because this variable is a static variable.
+//                GameActivity.highestScore = 0; // because this variable is a static variable.
                 score.setVisibility(View.INVISIBLE); // if someone presses the "final score" button before the game started.
 
                 Intent i = new Intent(this, GameActivity.class);
@@ -41,7 +41,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
             case R.id.final_score: // show the finely score
 
-                score.setText("Your final score is: " + GameActivity.currentScore);
+                score.setText("Your highest score is: " + GameActivity.highestScore);
                 if(score.getVisibility()==View.VISIBLE){
                     score.setVisibility(View.INVISIBLE);
                 }else{

@@ -23,8 +23,8 @@ public class GameActivity extends Activity implements View.OnClickListener{
     TextView textObjectPartB;
     TextView textObjectScore;
 
-    public static int currentScore = 0;
-
+    int currentScore = 0;
+    public static int highestScore =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -130,6 +130,9 @@ public class GameActivity extends Activity implements View.OnClickListener{
 
         if(isCorrect(answerGiven)){
             currentScore++;
+            if(currentScore > highestScore){
+                highestScore = currentScore;
+            }
         }else{
             currentScore = 0;
         }
@@ -140,10 +143,10 @@ public class GameActivity extends Activity implements View.OnClickListener{
     boolean isCorrect(int answerGiven){
         boolean correctTrueOrFalse;
         if(answerGiven == correctAnswer){
-            Toast.makeText(getApplicationContext(), "correct!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "correct!", Toast.LENGTH_SHORT).show();
             correctTrueOrFalse=true;
         }else{//Uh-oh!
-            Toast.makeText(getApplicationContext(), "incorrect!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "incorrect!", Toast.LENGTH_SHORT).show();
             correctTrueOrFalse=false;
         }
 
