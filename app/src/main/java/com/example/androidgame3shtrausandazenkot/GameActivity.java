@@ -2,6 +2,7 @@ package com.example.androidgame3shtrausandazenkot;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class GameActivity extends Activity implements View.OnClickListener{
     Button buttonObjectChoice1;
     Button buttonObjectChoice2;
     Button buttonObjectChoice3;
+    Button goBack;
     TextView textObjectPartA;
     TextView textObjectPartB;
     TextView textObjectScore;
@@ -35,12 +37,19 @@ public class GameActivity extends Activity implements View.OnClickListener{
         buttonObjectChoice1 = findViewById(R.id.buttonChoice1);
         buttonObjectChoice2 = findViewById(R.id.buttonChoice2);
         buttonObjectChoice3 = findViewById(R.id.buttonChoice3);
-
+        goBack = findViewById(R.id.go_back);
         buttonObjectChoice1.setOnClickListener(this);
         buttonObjectChoice2.setOnClickListener(this);
         buttonObjectChoice3.setOnClickListener(this);
 
         setQuestion();
+
+        goBack.setOnClickListener(e-> {
+            //closing the current activity
+            finish();
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
 
     }//onCreate ends here
 
@@ -63,8 +72,10 @@ public class GameActivity extends Activity implements View.OnClickListener{
             case R.id.buttonChoice3:
                 answerGiven = Integer.parseInt("" + buttonObjectChoice3.getText());
                 break;
-
+            default:
+                break;
         }
+
 
         updateScore(answerGiven);
         setQuestion();

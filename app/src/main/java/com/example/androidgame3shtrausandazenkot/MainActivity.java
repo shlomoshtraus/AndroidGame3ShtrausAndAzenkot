@@ -8,10 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-
 public class MainActivity extends Activity implements View.OnClickListener{
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +35,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 GameActivity.currentScore = 0; // because this variable is a static variable.
                 score.setVisibility(View.INVISIBLE); // if someone presses the "final score" button before the game started.
 
-                Intent i;
-                i = new Intent(this, GameActivity.class);
+                Intent i = new Intent(this, GameActivity.class);
                 startActivity(i);
                 break;
 
