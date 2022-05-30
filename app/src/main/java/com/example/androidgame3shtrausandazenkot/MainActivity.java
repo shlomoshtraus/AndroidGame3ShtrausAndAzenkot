@@ -32,7 +32,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         switch(view.getId()){
             case R.id.buttonPlay: // start the game.
 
-//                GameActivity.highestScore = 0; // because this variable is a static variable.
+                GameActivity.currentScore = 0; // because this variable is a static variable.
                 score.setVisibility(View.INVISIBLE); // if someone presses the "final score" button before the game started.
 
                 Intent i = new Intent(this, GameActivity.class);
@@ -41,7 +41,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
             case R.id.final_score: // show the finely score
 
-                score.setText("Your highest score is: " + GameActivity.highestScore);
+                score.setText("Your final score is: " + GameActivity.currentScore);
                 if(score.getVisibility()==View.VISIBLE){
                     score.setVisibility(View.INVISIBLE);
                 }else{
