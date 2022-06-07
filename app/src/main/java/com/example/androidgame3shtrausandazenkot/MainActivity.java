@@ -18,8 +18,12 @@ package com.example.androidgame3shtrausandazenkot;
        Perform maintenance (repairs) and improvements.
 
    Running:
-   Go please to Class called "MainActivity.java". After-press on the green running button in order to run.
+   Go please to Class called "MainActivity.java".
+   After-press on the green running button in order to run.
    When you finish press the "goBack" button and after the "Quit" button.
+
+   Clicking the "FINAL SCORE" button will display the final score.
+   Clicking again will hide the text.
 
    Important!
    The app has been tested on
