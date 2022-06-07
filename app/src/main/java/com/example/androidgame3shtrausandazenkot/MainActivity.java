@@ -1,4 +1,3 @@
-package com.example.androidgame3shtrausandazenkot;
 
 /*
 ==============================================================================
@@ -35,6 +34,9 @@ package com.example.androidgame3shtrausandazenkot;
 
 ===============================================================================
  */
+
+package com.example.androidgame3shtrausandazenkot;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -85,7 +87,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
 
             case R.id.quitButton: // exits the app.
-                // finish() did not work well so I used finishAffinity()
+                // finish() didn't work well so I used finishAffinity()
                 //  https://stackoverflow.com/questions/53494605/
                 finishAffinity();
                 break;
