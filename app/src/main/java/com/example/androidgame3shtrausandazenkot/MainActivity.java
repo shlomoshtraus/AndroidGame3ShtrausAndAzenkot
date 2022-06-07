@@ -1,5 +1,36 @@
 package com.example.androidgame3shtrausandazenkot;
 
+/*
+==============================================================================
+                                    Exercise 3
+
+   Shlomo Shtraus ID 209303023 shloymi987@gmail.com
+   Shlomo Azenkot ID 314646217 shlomiazn27@gmail.com
+   Second year, Computer Science Department- Ashqelon College (Gan Yavne)
+***********************************************************************
+
+   Assignment:
+   Getting a Game and then to make in it a couple types of fixes.
+
+   Main Goals:
+   Understand independently.
+       Work on an existing plan.
+       Perform maintenance (repairs) and improvements.
+
+   Running:
+   Go please to Class called "MainActivity.java". After-press on the green running button in order to run.
+   When you finish press the "goBack" button and after the "Quit" button.
+
+   Important!
+   The app has been tested on
+   Galaxy Nexus
+   API 29
+   Android 10.0
+
+   (On other cell phones the display may be different)
+
+===============================================================================
+ */
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -50,7 +81,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
 
             case R.id.quitButton: // exits the app.
-                finish();
+                // finish() did not work well so I used finishAffinity()
+                //  https://stackoverflow.com/questions/53494605/
+                finishAffinity();
+                break;
         }
     }
 
