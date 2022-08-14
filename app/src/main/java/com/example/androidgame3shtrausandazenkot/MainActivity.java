@@ -1,39 +1,4 @@
 
-/*
-==============================================================================
-                                    Exercise 3
-
-   Shlomo Shtraus ID 209303023 shloymi987@gmail.com
-   Shlomo Azenkot ID 314646217 shlomiazn27@gmail.com
-   Second year, Computer Science Department- Ashqelon College (Gan Yavne)
-***********************************************************************
-
-   Assignment:
-   Getting a Game and then to make in it a couple types of fixes.
-
-   Main Goals:
-   Understand independently.
-       Work on an existing plan.
-       Perform maintenance (repairs) and improvements.
-
-   Running:
-   Go please to Class called "MainActivity.java".
-   After-press on the green running button in order to run.
-   When you finish press the "goBack" button and after the "Quit" button.
-
-   Clicking the "FINAL SCORE" button will display the final score.
-   Clicking again will hide the text.
-
-   Important!
-   The app has been tested on
-   Galaxy Nexus
-   API 29
-   Android 10.0
-
-   (On other cell phones the display may be different)
-
-===============================================================================
- */
 
 package com.example.androidgame3shtrausandazenkot;
 
